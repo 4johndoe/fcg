@@ -1,5 +1,5 @@
 <?php
-
+//31240
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/p/create', 'PostsController@create')->name('post.create');
+Route::post('/p/store', 'PostsController@store');
+Route::get('/p/show/{post}', 'PostsController@show')->name('post.show');
+Route::get('/profile/{username}', 'ProfilesController@index')->name('profile.show');
+Route::get('/profile/{username}/edit', 'ProfilesController@edit')->name('profile.edit');
+Route::patch('/profile/{username}', 'ProfilesController@update')->name('profile.update');
