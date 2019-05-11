@@ -7,10 +7,10 @@
                 <img src="/storage/{{ $post->image }}" class="w-100">
             </div>
             <div class="col-4">
-                <span>
+                <div>
                     <div class="d-flex align-items-center">
                         <div class="pr-3">
-                            <img src="/storage/{{ $post->user->profile->image }}"
+                            <img src="{{ $post->user->profile->profileImage() }}"
                                     class="w-100 rounded-circle"
                                     style="max-width: 40px;" >
                         </div>
